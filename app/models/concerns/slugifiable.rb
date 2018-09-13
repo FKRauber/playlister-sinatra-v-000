@@ -1,4 +1,5 @@
 module Slugifiable
+
   module InstanceMethods
     def slug
       self.name.gsub(" ", "-").downcase
@@ -10,4 +11,5 @@ module Slugifiable
       self.all.find{ |instance| instance.slug == slug }
     end
   end
+
 end
