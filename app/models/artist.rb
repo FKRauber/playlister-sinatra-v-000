@@ -4,11 +4,11 @@ class Artist < ActiveRecord::Base
 
 # We are repeating a ton of code here. These two methods could go into a module.
 
-  # def slug
-  #   name.downcase.gsub(" ","-")
-  # end
-  #
-  # def self.find_by_slug(slug)
-  #   Artist.all.find{|artist| artist.slug == slug}
-  # end
+  def slug
+    name.downcase.gsub(" ","-")
+  end
+
+  def self.find_by_slug(slug)
+    Artist.all.find{|artist| artist.slug == slug}
+  end
 end
