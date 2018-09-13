@@ -11,6 +11,6 @@ class Artist < ActiveRecord::Base
   #   Artist.all.find{|artist| artist.slug == slug}
   # end
 
-  InstanceMethods.slug
+  Slugifiable.InstanceMethods.slug
 
 end
